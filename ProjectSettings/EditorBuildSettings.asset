@@ -8,6 +8,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
+  - enabled: 1
+    path: Assets/Scenes/Noah.unity
+    guid: 62b3035704dfc0e4c982dd97672c8ba3
+  - enabled: 1
+    path: Assets/Scenes/R.unity
+    guid: 348ad8519e2901c45a77b5b790cbe661
+  - enabled: 1
+    path: Assets/Scenes/Cena jogo.unity
+    guid: 6f5e83a1ae28d964ca83bad94f55c552
+  - enabled: 1
+    path: "Assets/Scenes/Cena c\xB4reditos.unity"
+    guid: aed7c65944e64294a8072a154a882d37
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0
