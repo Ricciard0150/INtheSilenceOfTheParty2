@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ItensColetáveis : MonoBehaviour
+public class ItensColetaveis : MonoBehaviour
 {
     public string itemName;
     public int itemId;
@@ -8,15 +8,44 @@ public class ItensColetáveis : MonoBehaviour
     public Sprite icon;
     public int value;
 
+    private bool jogadorProximo = false;
+    private GameObject jogador;
+
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
         {
-            Inventory inventory = other.GetComponent<Inventory>();
+            jogadorProximo = true;
+            jogador = other.gameObject;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            jogadorProximo = false;
+            jogador = null;
+        }
+    }
+
+    private void Update()
+    {
+        if (jogadorProximo && Input.GetKeyDown(KeyCode.E))
+        {
+            Inventory inventory = jogador.GetComponent<Inventory>();
             if (inventory != null)
             {
                 inventory.AddItem(itemName, itemId, description, icon, value);
-                Destroy(gameObject); // remove o item da cena
+
+                // Tocar som de coleta
+                SoundScript som = jogador.GetComponent<SoundScript>();
+                if (som != null)
+                {
+                    som.TocarSomDeColeta();
+                }
+
+                Destroy(gameObject); // Remove o item da cena
             }
         }
     }

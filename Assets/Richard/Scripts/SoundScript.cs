@@ -2,17 +2,15 @@ using UnityEngine;
 
 public class SoundScript : MonoBehaviour
 {
-    public AudioSource audioSource;   // arraste o AudioSource aqui no Inspector
+    public AudioSource audioSource;
+    public AudioClip somColeta;
 
-    public AudioClip somColeta;       // arraste o som de coleta aqui
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    public void TocarSomDeColeta()
     {
-        // Exemplo: som quando encosta em objeto coletável
-        if (collision.CompareTag("Item"))
+        if (somColeta != null && audioSource != null)
         {
             audioSource.PlayOneShot(somColeta);
-            Debug.Log("Som executado!");
+            Debug.Log("Som de coleta executado!");
         }
     }
 }
