@@ -7,7 +7,7 @@ public class TitleManager : MonoBehaviour
     {
         if (Input.anyKeyDown || Input.GetMouseButtonDown(0))
         {
-            SceneManager.LoadScene("lab1");
+            SceneManager.LoadScene("R");
         }
     }
 }
