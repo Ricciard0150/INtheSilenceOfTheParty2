@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class ItensColetaveis : MonoBehaviour
+public class ItensColetáveis : MonoBehaviour
 {
     public string itemName;
     public int itemId;

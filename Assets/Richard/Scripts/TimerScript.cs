@@ -6,7 +6,7 @@ public class TimerScript : MonoBehaviour
     [SerializeField] TMP_Text timerText;
 
     public float timerRemaining = 60f;
-    bool timerIsRunning = true;
+    public bool timerIsRunning = true;
 
     void Update()
     {
