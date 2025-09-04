@@ -46,7 +46,7 @@ public class EnemieFollowing : MonoBehaviour
         {
             if (panelLose != null)
                 panelLose.SetActive(true);
-
+            Destroy(target.gameObject);
             Destroy(gameObject);
         }
     }
