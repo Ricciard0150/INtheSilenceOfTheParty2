@@ -278,7 +278,7 @@ Canvas:
   m_RenderMode: 1
   m_Camera: {fileID: 1875981209}
   m_PlaneDistance: 100
-  m_PixelPerfect: 0
+  m_PixelPerfect: 1
   m_ReceivesEvents: 1
   m_OverrideSorting: 0
   m_OverridePixelPerfect: 0
@@ -321,6 +321,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b656a43831411745ae04cc17aec3abb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  panelCreditos: {fileID: 0}
 --- !u!1 &746389286
 GameObject:
   m_ObjectHideFlags: 0
