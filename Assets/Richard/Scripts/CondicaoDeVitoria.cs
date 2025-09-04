@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class CondiçãoDeVitoria : MonoBehaviour
+public class CondicaoDeVitoria : MonoBehaviour
 {
     public Inventory inventory; // arrasta o Inventory aqui no inspector
     public TimerScript timerScript; // arrasta o TimerScript no inspector
@@ -14,10 +14,10 @@ public class CondiçãoDeVitoria : MonoBehaviour
     {
         if (collision.CompareTag("Player")) // Corrigido
         {
-            // Verifica se o jogador coletou todos os itens possíveis
+            // Verifica se o jogador coletou todos os itens possï¿½veis
             if (inventory.items.Count == inventory.maxSlots)
             {
-                // Verifica se ainda há tempo no cronômetro
+                // Verifica se ainda hï¿½ tempo no cronï¿½metro
                 if (timerScript.timerRemaining > 0)
                 {
                     porta.SetActive(false);
@@ -30,7 +30,7 @@ public class CondiçãoDeVitoria : MonoBehaviour
             }
             else
             {
-                Debug.Log("Você ainda não pegou todos os itens!");
+                Debug.Log("Vocï¿½ ainda nï¿½o pegou todos os itens!");
             }
         }
     }
